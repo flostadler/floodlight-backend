@@ -4,4 +4,4 @@ spring:
       database: floodlight
 
 api:
-  googleCloudKey: AIzaSyD78BxR0AqvHBA88BapgOKD87RUpAjQEGM
+  googleCloudKey: 
