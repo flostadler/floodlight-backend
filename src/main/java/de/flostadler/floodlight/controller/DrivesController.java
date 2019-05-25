@@ -7,7 +7,6 @@ import de.flostadler.floodlight.repository.DriveRepository;
 import de.flostadler.floodlight.repository.GameRepository;
 import de.flostadler.floodlight.repository.UserRepository;
 import de.flostadler.floodlight.service.GeoSpatialResolver;
-import de.flostadler.floodlight.service.RouteBoxer;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +23,6 @@ public class DrivesController {
     private DriveRepository driveRepository;
 
     private GeoSpatialResolver geoSpatialResolver;
-    private RouteBoxer routeBoxer = new RouteBoxer();
 
     @PostMapping("/create")
     public ResponseEntity<Drive> addDrive(
