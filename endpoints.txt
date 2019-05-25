@@ -1,3 +1,5 @@
+Game:
+
 /game/getAllSorted
 	Returns all Games ordered by date ascending.
 
@@ -26,6 +28,7 @@
         }
     ]
 
+Drive:
 
 /drive/create?{username: String, gameId: String, longitude: double, latitude: double, meterRange: double, seats: int}
     Creates a drive. Returns the newly created drive:
@@ -91,12 +94,10 @@
 
 /drive/addPassenger?{driveId: String, username: String, longitude: String, latitude: String}
 
-    Adds a passenger to a drive
+    Adds a passenger to a drive and returns the updated drive
 
+/drive/getPossibleDrives?{gameId: String, longitude: double, latitude: double}
 
-
-
-
-
+    Searches for possible drives for this location
 
 
