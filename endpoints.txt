@@ -1,0 +1,102 @@
+/game/getAllSorted
+	Returns all Games ordered by date ascending.
+
+	example response:
+
+    [
+        {
+            "id": "5ce81397ae6337957d6646e1",
+            "date": 1559395800000,
+            "homeTeam": {
+                "id": "ssv-jahn",
+                "name": "SSV Jahn Regensburg",
+                "location": {
+                    "longitude": 12.107288,
+                    "latitude": 48.990813
+                }
+            },
+            "awayTeam": {
+                "id": "st-pauli",
+                "name": "FC St. Pauli",
+                "location": {
+                    "longitude": 9.9677482,
+                    "latitude": 53.5545585
+                }
+            }
+        }
+    ]
+
+
+/drive/create?{username: String, gameId: String, longitude: double, latitude: double, meterRange: double, seats: int}
+    Creates a drive. Returns the newly created drive:
+
+    {
+            "id": "5ce879e9ae63377b7375f158",
+            "seats": 4,
+            "driverMapping": {
+                "user": {
+                    "username": "anicx",
+                    "name": "Florian Stadler"
+                },
+                "location": {
+                    "longitude": 12.5801538,
+                    "latitude": 48.8777333
+                }
+            },
+            "game": {
+                "id": "5ce81397ae6337957d6646e1",
+                "date": 1559395800000,
+                "homeTeam": {
+                    "id": "ssv-jahn",
+                    "name": "SSV Jahn Regensburg",
+                    "location": {
+                        "longitude": 12.107288,
+                        "latitude": 48.990813
+                    }
+                },
+                "awayTeam": {
+                    "id": "st-pauli",
+                    "name": "FC St. Pauli",
+                    "location": {
+                        "longitude": 9.9677482,
+                        "latitude": 53.5545585
+                    }
+                }
+            },
+            "passengerMappings": [
+                {
+                    "user": {
+                        "username": "paul123",
+                        "name": "Paul Pongratz"
+                    },
+                    "location": {
+                        "longitude": 12.577541,
+                        "latitude": 48.8815948
+                    }
+                }
+            ],
+            "meterRange": 5000,
+            "arrivalDate": 1559395800000,
+            "destination": {
+                "longitude": 12.107288,
+                "latitude": 48.990813
+            }
+        }
+
+/drive/getForUser?{username: String}
+    Returns all drives the user participates in as a driver or passenger
+
+    Returns as an Array of drives (see above for an example of a drive object)
+
+
+/drive/addPassenger?{driveId: String, username: String, longitude: String, latitude: String}
+
+    Adds a passenger to a drive
+
+
+
+
+
+
+
+
